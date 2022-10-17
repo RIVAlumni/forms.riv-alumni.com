@@ -1,0 +1,1 @@
+{"version":3,"file":"App.474399f9.js","sources":["../../src/App.tsx"],"sourcesContent":["export default function App() {\n  return <div>work in progress</div>;\n}\n"],"names":["App"],"mappings":"wCAAA,SAAwBA,GAAM,CAC5B,SAAO,MAAA,CAAA,SAAA,kBAAA,CAAP,CACD"}
