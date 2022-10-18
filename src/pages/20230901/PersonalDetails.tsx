@@ -23,7 +23,7 @@ const PersonalDetailsSchema = z.object({
     .trim()
     .min(1, 'This is a required field.')
     .max(4, 'Invalid NRIC. Please refer to the example given above.')
-    .regex(/\d{3}\w/),
+    .regex(/\d{3}[XWUTRQPNMLKJZIHGFEDCBA]/),
   'Email Address': z
     .string()
     .trim()
