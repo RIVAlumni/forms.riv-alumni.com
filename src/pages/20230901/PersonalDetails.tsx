@@ -30,7 +30,9 @@ const PersonalDetailsSchema = z.object({
     .min(1, 'This is a required field.')
     .email('Invalid email.'),
   'Gender': z
-    .string()
+    .string({
+      invalid_type_error: 'This is a required field.',
+    })
     .trim()
     .regex(/^Male$|^Female$/, 'This is a required field.'),
   'Graduating Class': z
