@@ -17,7 +17,7 @@ const PersonalDetailsSchema = z.object({
     .trim()
     .min(1, 'This is a required field.')
     .max(30, 'Is your name really that long?')
-    .regex(/[\w\s,]+/),
+    .regex(/^[A-Z\s,()]+$/),
   'Partial NRIC': z
     .string()
     .trim()
