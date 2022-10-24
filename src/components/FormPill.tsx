@@ -11,8 +11,10 @@ interface FormPillComponentProps
 const FormPillComponent: React.FC<FormPillComponentProps> = ({
   className,
   children,
+  ...props
 }) => (
   <button
+    {...props}
     type='button'
     className={`
       px-2.5 py-1 rounded-full
