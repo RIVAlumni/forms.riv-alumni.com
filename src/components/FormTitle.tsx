@@ -12,7 +12,7 @@ const FormTitleComponent: React.FC<FormTitleComponentProps> = ({
       {children}
     </h1>
 
-    <hr className='bg-gray-200 border-0 h-px' />
+    <hr className='h-px bg-gray-200 border-none' />
 
     <span className='text-red-600'>* Required</span>
   </FormCardComponent>

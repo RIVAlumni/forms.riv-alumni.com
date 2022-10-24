@@ -11,7 +11,7 @@ const FormTextComponent: React.FC<FormTextComponentProps> = ({
   children,
   className,
 }) => (
-  <FormCard className={`flex flex-col leading-normal ${className}`}>
+  <FormCard className={`flex flex-col ${className}`}>
     <h6 className='font-bold'>{title}</h6>
     {children}
   </FormCard>

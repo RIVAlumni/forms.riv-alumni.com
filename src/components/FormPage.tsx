@@ -5,12 +5,12 @@ interface FormPageComponentProps {
 const FormPageComponent: React.FC<FormPageComponentProps> = ({ children }) => (
   <section
     className={`
-      p-5 w-full max-w-2xl
+      p-4 w-full max-w-2xl
       flex flex-col gap-4 mx-auto
     `}>
     {children}
 
-    <div className='text-sm text-center text-slate-600'>
+    <div className='text-sm text-center text-slate-500'>
       Never submit passwords through RIVA Forms. &nbsp;
       <a
         href='//instagram.com/riv.alumni'
