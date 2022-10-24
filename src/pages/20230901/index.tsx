@@ -7,7 +7,7 @@ import PersonalDetails, { PersonalDetailsSchema } from './PersonalDetails';
 import EmergencyDetails, { EmergencyDetailsSchema } from './EmergencyDetails';
 import VisitationDetails from './VisitationDetails';
 
-import useState from './state';
+import useState from './useState';
 
 const schemas = [
   LandingPageSchema,
