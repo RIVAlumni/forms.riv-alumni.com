@@ -2,6 +2,7 @@ import z from 'zod';
 import { useFormContext } from 'react-hook-form';
 
 import FormTextComponent from '../../components/FormText';
+import FormPillComponent from '../../components/FormPill';
 import FormCardComponent from '../../components/FormCard';
 import FormLabelComponent from '../../components/FormLabel';
 import FormInputComponent from '../../components/FormInput';
@@ -92,12 +93,9 @@ const PersonalDetails: React.FC = () => {
             NRIC/Student Pass. Failure to do so will result in processing
             delays.
           </p>
-          <a
-            href='#'
-            className='text-blue-500 underline underline-offset-4'>
-            See example
-          </a>
         </FormFieldDescription>
+
+        <FormPillComponent>See example</FormPillComponent>
 
         <FormInputComponent
           type='text'
@@ -119,6 +117,8 @@ const PersonalDetails: React.FC = () => {
         <FormFieldDescription className='mb-2 block italic text-gray-500'>
           Example: 123A
         </FormFieldDescription>
+
+        <FormPillComponent>See example</FormPillComponent>
 
         <FormInputComponent
           type='text'
@@ -237,7 +237,7 @@ const PersonalDetails: React.FC = () => {
         </FormLabelComponent>
 
         <FormFieldDescription className='mb-2 block italic text-gray-500'>
-          Example: 91234567
+          Example: 91234567.
         </FormFieldDescription>
 
         <FormInputComponent
@@ -254,7 +254,7 @@ const PersonalDetails: React.FC = () => {
         </FormLabelComponent>
 
         <FormFieldDescription className='mb-2 block italic text-gray-500'>
-          Example: 91234567
+          Example: 61234567.
         </FormFieldDescription>
 
         <FormInputComponent
