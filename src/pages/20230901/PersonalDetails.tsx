@@ -76,245 +76,245 @@ const PersonalDetails: React.FC = () => {
   const [isNricExampleOpen, setIsNricExampleOpen] = useState(false);
 
   return (
-    <>
-      <FormDialogComponent
-        isOpen={isFullNameExampleOpen}
-        setIsOpen={setIsFullNameExampleOpen}>
-        <img
-          className='rounded-lg'
-          alt='EZ-Link Specimen | Credits: NUS'
-          src='https://nus.edu.sg/osa/images/default-source/osa/undergraduate31be75803bf9467594db92ffaefba0a5.jpg'
-        />
-
-        <p className='text-sm text-gray-500'>
-          Shown in the specimen above, &nbsp;
-          <span className='italic underline underline-offset-2'>
-            GEORGE TAN
-          </span>
-          &nbsp; is the full name of the student. In this case, you will enter
-          exactly &nbsp;
-          <span className='italic underline underline-offset-2'>
-            GEORGE TAN
-          </span>
-          &nbsp; in the field.
+    <div className='flex flex-col gap-4'>
+      <FormTextComponent title='Personal Details'>
+        <p>
+          Enter your personal details so that we can properly identify you! :)
         </p>
-      </FormDialogComponent>
+      </FormTextComponent>
 
-      <FormDialogComponent
-        isOpen={isNricExampleOpen}
-        setIsOpen={setIsNricExampleOpen}>
-        <img
-          className='rounded-lg'
-          alt='EZ-Link Specimen | Credits: NUS'
-          src='https://nus.edu.sg/osa/images/default-source/osa/undergraduate31be75803bf9467594db92ffaefba0a5.jpg'
-        />
+      <FormCardComponent>
+        <FormLabelComponent
+          required
+          htmlFor='Full Name'
+          className='mb-2 block text-gray-900'>
+          Full Name <span className='italic'>(as on NRIC)</span>
+        </FormLabelComponent>
 
-        <p className='text-sm text-gray-500'>
-          Shown in the specimen above, &nbsp;
-          <span className='italic underline underline-offset-2'>S1234567B</span>
-          &nbsp; is the full NRIC of the student. In this case, you will enter
-          only the last 4 alphanumerical characters &nbsp;
-          <span className='italic underline underline-offset-2'>567B</span>
-          &nbsp; into the field.
-        </p>
-      </FormDialogComponent>
-
-      <div className='flex flex-col gap-4'>
-        <FormTextComponent title='Personal Details'>
+        <FormFieldDescription className='mb-2 block italic text-gray-500'>
           <p>
-            Enter your personal details so that we can properly identify you! :)
+            Note: Please type letter-by-letter exactly as shown in your
+            NRIC/Student Pass. Failure to do so will result in processing
+            delays.
           </p>
-        </FormTextComponent>
+        </FormFieldDescription>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            required
-            htmlFor='Full Name'
-            className='mb-2 block text-gray-900'>
-            Full Name <span className='italic'>(as on NRIC)</span>
-          </FormLabelComponent>
+        <FormPillComponent onClick={() => setIsFullNameExampleOpen(true)}>
+          See specimen
+        </FormPillComponent>
 
-          <FormFieldDescription className='mb-2 block italic text-gray-500'>
-            <p>
-              Note: Please type letter-by-letter exactly as shown in your
-              NRIC/Student Pass. Failure to do so will result in processing
-              delays.
-            </p>
-          </FormFieldDescription>
-
-          <FormPillComponent onClick={() => setIsFullNameExampleOpen(true)}>
-            See specimen
-          </FormPillComponent>
-
-          <FormInputComponent
-            type='text'
-            name='Full Name'
-            registerOptions={{
-              setValueAs: (value: string) => value.toUpperCase(),
-            }}
+        <FormDialogComponent
+          isOpen={isFullNameExampleOpen}
+          setIsOpen={setIsFullNameExampleOpen}>
+          <img
+            className='rounded-lg'
+            alt='EZ-Link Specimen | Credits: NUS'
+            src='https://firebasestorage.googleapis.com/v0/b/rivalumniops-forms.appspot.com/o/examples%2FEZLinkFullNameExample.png?alt=media'
           />
-        </FormCardComponent>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            required
-            htmlFor='Partial NRIC'
-            className='mb-2 block text-gray-900'>
-            Last 3 digits and alphabet of NRIC
-          </FormLabelComponent>
+          <p className='text-sm text-gray-500'>
+            Shown in the specimen above, &nbsp;
+            <span className='italic underline underline-offset-2'>
+              GEORGE TAN
+            </span>
+            &nbsp; is the full name of the student. In this case, you will enter
+            exactly &nbsp;
+            <span className='italic underline underline-offset-2'>
+              GEORGE TAN
+            </span>
+            &nbsp; in the field.
+          </p>
+        </FormDialogComponent>
 
-          <FormFieldDescription className='mb-2 block italic text-gray-500'>
-            Example: 123A
-          </FormFieldDescription>
+        <FormInputComponent
+          type='text'
+          name='Full Name'
+          registerOptions={{
+            setValueAs: (value: string) => value.toUpperCase(),
+          }}
+        />
+      </FormCardComponent>
 
-          <FormPillComponent onClick={() => setIsNricExampleOpen(true)}>
-            See specimen
-          </FormPillComponent>
+      <FormCardComponent>
+        <FormLabelComponent
+          required
+          htmlFor='Partial NRIC'
+          className='mb-2 block text-gray-900'>
+          Last 3 digits and alphabet of NRIC
+        </FormLabelComponent>
 
-          <FormInputComponent
-            type='text'
-            name='Partial NRIC'
-            registerOptions={{
-              setValueAs: (value: string) => value.toUpperCase(),
-            }}
+        <FormFieldDescription className='mb-2 block italic text-gray-500'>
+          Example: 123A
+        </FormFieldDescription>
+
+        <FormPillComponent onClick={() => setIsNricExampleOpen(true)}>
+          See specimen
+        </FormPillComponent>
+
+        <FormDialogComponent
+          isOpen={isNricExampleOpen}
+          setIsOpen={setIsNricExampleOpen}>
+          <img
+            className='rounded-lg'
+            alt='EZ-Link Specimen | Credits: NUS'
+            src='https://firebasestorage.googleapis.com/v0/b/rivalumniops-forms.appspot.com/o/examples%2FEZLinkLast3Digits%26AlphabetExample.png?alt=media'
           />
-        </FormCardComponent>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            required
-            htmlFor='Email Address'
-            className='mb-2 block text-gray-900'>
-            Email Address
-          </FormLabelComponent>
+          <p className='text-sm text-gray-500'>
+            Shown in the specimen above, &nbsp;
+            <span className='italic underline underline-offset-2'>
+              S1234567B
+            </span>
+            &nbsp; is the full NRIC of the student. In this case, you will enter
+            only the last 4 alphanumerical characters &nbsp;
+            <span className='italic underline underline-offset-2'>567B</span>
+            &nbsp; into the field.
+          </p>
+        </FormDialogComponent>
 
-          <FormFieldDescription className='mb-2 block italic text-gray-500'>
-            Example: winnie.pooh@gmail.com
-          </FormFieldDescription>
+        <FormInputComponent
+          type='text'
+          name='Partial NRIC'
+          registerOptions={{
+            setValueAs: (value: string) => value.toUpperCase(),
+          }}
+        />
+      </FormCardComponent>
 
-          <FormInputComponent
-            type='email'
-            name='Email Address'
-            registerOptions={{
-              setValueAs: (value: string) => value.toLowerCase(),
-            }}
-          />
-        </FormCardComponent>
+      <FormCardComponent>
+        <FormLabelComponent
+          required
+          htmlFor='Email Address'
+          className='mb-2 block text-gray-900'>
+          Email Address
+        </FormLabelComponent>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            required
-            htmlFor='Gender'
-            className='mb-2 block text-gray-900'>
-            Gender
-          </FormLabelComponent>
+        <FormFieldDescription className='mb-2 block italic text-gray-500'>
+          Example: winnie.pooh@gmail.com
+        </FormFieldDescription>
 
-          <div className='w-full mt-2 inline-flex flex-col gap-2'>
-            <div className='flex flex-row items-center'>
-              <FormRadioComponent
-                id='Male'
-                name='Gender'
-                label='Male'
-                errorHidden
-              />
-            </div>
+        <FormInputComponent
+          type='email'
+          name='Email Address'
+          registerOptions={{
+            setValueAs: (value: string) => value.toLowerCase(),
+          }}
+        />
+      </FormCardComponent>
 
-            <div className='flex flex-row items-center'>
-              <FormRadioComponent
-                id='Female'
-                name='Gender'
-                label='Female'
-                errorHidden
-              />
-            </div>
+      <FormCardComponent>
+        <FormLabelComponent
+          required
+          htmlFor='Gender'
+          className='mb-2 block text-gray-900'>
+          Gender
+        </FormLabelComponent>
+
+        <div className='w-full mt-2 inline-flex flex-col gap-2'>
+          <div className='flex flex-row items-center'>
+            <FormRadioComponent
+              id='Male'
+              name='Gender'
+              label='Male'
+              errorHidden
+            />
           </div>
 
-          {errors['Gender'] && (
-            <p className='mt-1 text-sm text-red-600 font-medium'>
-              {errors['Gender']?.message?.toString()}
-            </p>
-          )}
-        </FormCardComponent>
+          <div className='flex flex-row items-center'>
+            <FormRadioComponent
+              id='Female'
+              name='Gender'
+              label='Female'
+              errorHidden
+            />
+          </div>
+        </div>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            required
-            htmlFor='Graduating Class'
-            className='mb-2 block text-gray-900'>
-            Graduating Class
-          </FormLabelComponent>
+        {errors['Gender'] && (
+          <p className='mt-1 text-sm text-red-600 font-medium'>
+            {errors['Gender']?.message?.toString()}
+          </p>
+        )}
+      </FormCardComponent>
 
-          <FormSelectComponent
-            name='Graduating Class'
-            options={['Choose...'].concat(GRAD_CLASSES)}
-          />
-        </FormCardComponent>
+      <FormCardComponent>
+        <FormLabelComponent
+          required
+          htmlFor='Graduating Class'
+          className='mb-2 block text-gray-900'>
+          Graduating Class
+        </FormLabelComponent>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            required
-            htmlFor='Graduating Year'
-            className='mb-2 block text-gray-900'>
-            Graduating Year
-          </FormLabelComponent>
+        <FormSelectComponent
+          name='Graduating Class'
+          options={['Choose...'].concat(GRAD_CLASSES)}
+        />
+      </FormCardComponent>
 
-          <FormSelectComponent
-            name='Graduating Year'
-            options={['Choose...'].concat(GRAD_YEARS)}
-            registerOptions={{ valueAsNumber: true }}
-          />
-        </FormCardComponent>
+      <FormCardComponent>
+        <FormLabelComponent
+          required
+          htmlFor='Graduating Year'
+          className='mb-2 block text-gray-900'>
+          Graduating Year
+        </FormLabelComponent>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            required
-            htmlFor='Current School / Institution'
-            className='mb-2 block text-gray-900'>
-            Current School / Institution
-          </FormLabelComponent>
+        <FormSelectComponent
+          name='Graduating Year'
+          options={['Choose...'].concat(GRAD_YEARS)}
+          registerOptions={{ valueAsNumber: true }}
+        />
+      </FormCardComponent>
 
-          <FormInputComponent
-            type='text'
-            name='Current School / Institution'
-          />
-        </FormCardComponent>
+      <FormCardComponent>
+        <FormLabelComponent
+          required
+          htmlFor='Current School / Institution'
+          className='mb-2 block text-gray-900'>
+          Current School / Institution
+        </FormLabelComponent>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            htmlFor='Contact Number'
-            required
-            className='mb-2 block text-gray-900'>
-            Contact Number
-          </FormLabelComponent>
+        <FormInputComponent
+          type='text'
+          name='Current School / Institution'
+        />
+      </FormCardComponent>
 
-          <FormFieldDescription className='mb-2 block italic text-gray-500'>
-            Example: 91234567.
-          </FormFieldDescription>
+      <FormCardComponent>
+        <FormLabelComponent
+          htmlFor='Contact Number'
+          required
+          className='mb-2 block text-gray-900'>
+          Contact Number
+        </FormLabelComponent>
 
-          <FormInputComponent
-            type='tel'
-            name='Contact Number'
-          />
-        </FormCardComponent>
+        <FormFieldDescription className='mb-2 block italic text-gray-500'>
+          Example: 91234567.
+        </FormFieldDescription>
 
-        <FormCardComponent>
-          <FormLabelComponent
-            htmlFor='Home Number'
-            className='mb-2 block text-gray-900'>
-            Home Number
-          </FormLabelComponent>
+        <FormInputComponent
+          type='tel'
+          name='Contact Number'
+        />
+      </FormCardComponent>
 
-          <FormFieldDescription className='mb-2 block italic text-gray-500'>
-            Example: 61234567.
-          </FormFieldDescription>
+      <FormCardComponent>
+        <FormLabelComponent
+          htmlFor='Home Number'
+          className='mb-2 block text-gray-900'>
+          Home Number
+        </FormLabelComponent>
 
-          <FormInputComponent
-            type='tel'
-            name='Home Number'
-          />
-        </FormCardComponent>
-      </div>
-    </>
+        <FormFieldDescription className='mb-2 block italic text-gray-500'>
+          Example: 61234567.
+        </FormFieldDescription>
+
+        <FormInputComponent
+          type='tel'
+          name='Home Number'
+        />
+      </FormCardComponent>
+    </div>
   );
 };
 
